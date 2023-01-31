@@ -3,36 +3,34 @@
 #include<math.h>
 
 Circulo::Circulo()
-    :QPoint(0,0)
 {
-
+    //Ubicado en el centro de la pantalla
+    ejex=200;
+    ejey=150;
+    tam=120;
 }
 
-Circulo::Circulo(int xpos, int ypos, int num)
-    :QPoint(xpos, ypos)
+int Circulo::getEjex() const
 {
-
-
+    return ejex;
 }
 
-int Circulo::getLargo() const
+void Circulo::setEjex(int newEjex)
 {
-    return largo;
+    ejex = newEjex;
 }
 
-void Circulo::setLargo(int newLargo)
+/*(REVISAR PRIMERO COMENTARIO DE FUNCION MIEMBRO dibujo() sobre el problema)
+    El problema se encontraba en que el return estaba en la variable "ejex"
+    ¡¡¡¡¡SIEMPRE REVISAR QUE SE ENCUENTRA BIEN UBICADAS Y DECLARADAS LAS VARIABLES!!!!!*/
+int Circulo::getEjey() const
 {
-    largo = newLargo;
+    return ejey;
 }
 
-int Circulo::getAlto() const
+void Circulo::setEjey(int newEjey)
 {
-    return alto;
-}
-
-void Circulo::setAlto(int newAlto)
-{
-    alto = newAlto;
+    ejey = newEjey;
 }
 
 int Circulo::getTam() const
@@ -43,4 +41,13 @@ int Circulo::getTam() const
 void Circulo::setTam(int newTam)
 {
     tam = newTam;
+}
+
+Circulo::Circulo(int xpos, int ypos, int num)
+    :QPoint(xpos, ypos)
+{
+    this->ejex=xpos;
+    this->ejey=ypos;
+    this->tam=num;
+
 }

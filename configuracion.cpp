@@ -1,5 +1,4 @@
 #include "configuracion.h"
-#include "circulo.h"
 #include "ui_configuracion.h"
 
 Configuracion::Configuracion(QWidget *parent) :
@@ -9,6 +8,8 @@ Configuracion::Configuracion(QWidget *parent) :
     ui->setupUi(this);
     m_color.setRgb(165,29,45);
     setWidgetColor();
+    m_dimension = 5;
+
 }
 
 Configuracion::~Configuracion()

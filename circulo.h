@@ -2,7 +2,6 @@
 #define CIRCULO_H
 
 #include <QPoint>
-#include "configuracion.h"
 
 #include<iostream>
 
@@ -14,19 +13,21 @@ public:
     Circulo();
     Circulo(int xpos, int ypos, int num);
 
-
-    int getLargo() const;
-    void setLargo(int newLargo);
-
-    int getAlto() const;
-    void setAlto(int newAlto);
-
+    //Los respectivos get y set nos dejarán ubicar el circulo
+    //Ubicacion en el eje X
+    int getEjex() const;
+    void setEjex(int newEjex);
+    //ubicacion en el eje Y
+    int getEjey() const;
+    void setEjey(int newEjey);
+    //Tamaño del circulo
     int getTam() const;
     void setTam(int newTam);
 
 private:
-    int largo;
-    int alto;
+    //Las variables se crean para poder crear el margen del circulo
+    int ejex;
+    int ejey;
     int tam;
 };
 

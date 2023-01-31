@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QColorDialog>
+#include "circulo.h"
 
 #include<iostream>
 
