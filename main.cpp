@@ -1,3 +1,5 @@
+//Alejandro Valencia 1722067046
+
 #include "juego.h"
 
 #include <QApplication>

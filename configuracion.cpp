@@ -1,4 +1,5 @@
 #include "configuracion.h"
+#include "circulo.h"
 #include "ui_configuracion.h"
 
 Configuracion::Configuracion(QWidget *parent) :
@@ -17,7 +18,9 @@ Configuracion::~Configuracion()
 
 void Configuracion::on_btnColor_released()
 {
-
+    m_color = QColorDialog::getColor(m_color,
+                                    this,
+                                    "Color del pincel");
 }
 
 void Configuracion::setColor(const QColor &newColor)
@@ -47,5 +50,11 @@ const QColor &Configuracion::color() const
 int Configuracion::dimension() const
 {
     return m_dimension;
+}
+
+
+void Configuracion::on_inDimension_valueChanged(int value)
+{
+
 }
 

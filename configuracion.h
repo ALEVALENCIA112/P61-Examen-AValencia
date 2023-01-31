@@ -4,6 +4,11 @@
 #include <QDialog>
 #include <QColorDialog>
 
+#include<iostream>
+
+using namespace std;
+
+
 namespace Ui {
 class Configuracion;
 }
@@ -24,6 +29,8 @@ public:
 
 private slots:
     void on_btnColor_released();
+
+    void on_inDimension_valueChanged(int value);
 
 private:
     Ui::Configuracion *ui;

@@ -6,6 +6,11 @@
 #include "configuracion.h"
 #include "circulo.h"
 
+#include<iostream>
+
+using namespace std;
+
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Juego; }
 QT_END_NAMESPACE
@@ -17,6 +22,9 @@ class Juego : public QMainWindow
 public:
     Juego(QWidget *parent = nullptr);
     ~Juego();
+
+protected:
+    void paintEvent(QPaintEvent *event);
 
 private slots:
     void on_btnArriba_released();
@@ -34,5 +42,8 @@ private slots:
 private:
     Ui::Juego *ui;
     Circulo *m_circulo;
+    QImage *imagen;
+    QPainter *pincel;
+    void dibujar();
 };
 #endif // JUEGO_H

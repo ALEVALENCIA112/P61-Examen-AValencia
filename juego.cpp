@@ -1,4 +1,5 @@
 #include "juego.h"
+#include "qpainter.h"
 #include "ui_juego.h"
 
 Juego::Juego(QWidget *parent)
@@ -17,6 +18,20 @@ Juego::~Juego()
     delete ui;
 }
 
+void Juego::dibujar()
+{
+
+    QPen lapiz;
+    lapiz.setWidth(5);
+    lapiz.setColor(Qt::black);
+    lapiz.setJoinStyle(Qt::MiterJoin);
+
+    lapiz.setColor(Qt::black);
+    lapiz.setWidth(5);
+    pincel->setPen(lapiz);
+    pincel->drawEllipse(m_circulo->getLargo(), m_circulo->getLargo(), m_circulo->getTam(), m_circulo->getTam());
+    update();
+}
 
 void Juego::on_btnArriba_released()
 {
